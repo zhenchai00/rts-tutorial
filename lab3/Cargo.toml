@@ -1,0 +1,9 @@
+[package]
+name = "lab3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossbeam = "0.8.4"
+mpmc = "0.1.6"
+crossbeam-channel = "0.5"
