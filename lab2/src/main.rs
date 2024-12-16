@@ -2,7 +2,7 @@ mod benchmarking;
 mod channel_example;
 
 use benchmarking::{mutex_test, rwlock_test};
-use channel_example::{channel_ex, crossbeam_channel_ex};
+use channel_example::{assessment_channel, channel_ex, crossbeam_channel_ex};
 use bma_benchmark::benchmark;
 use std::hint::black_box;
 
@@ -11,21 +11,23 @@ fn main() {
     // benchmarking::mutex_test();
     // benchmarking::rwlock_test();
 
-    mutex_test();
-    rwlock_test();
+    // mutex_test();
+    // rwlock_test();
 
-    benchmark!(1000000,{
-        bench_vec();
-    });
-    benchmark!(1000000,{
-        bench_vec2();
-    });
-    benchmark!(1000000,{
-        bench_vec3();
-    });
+    // benchmark!(1000000,{
+    //     bench_vec();
+    // });
+    // benchmark!(1000000,{
+    //     bench_vec2();
+    // });
+    // benchmark!(1000000,{
+    //     bench_vec3();
+    // });
 
     channel_ex();
     crossbeam_channel_ex();
+
+    assessment_channel();
 }
 
 struct Student {
