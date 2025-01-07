@@ -66,8 +66,6 @@ pub fn stock_example() {
                 let mut stocks = stocks.lock().unwrap();
 
                 // select a stock
-                // let mut rng = rand::thread_rng();
-                // let index = rng.gen_range(0..stocks.len());
                 let index = rand::thread_rng().gen_range(0..stocks.len());
 
                 // increment stock
