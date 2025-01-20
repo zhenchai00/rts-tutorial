@@ -1,0 +1,15 @@
+[package]
+name = "lab5"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+criterion = "0.5.1"
+crossbeam = "0.8.4"
+
+[[bench]]
+# name = "my_bench"
+name = "mpsc_crossbeam_bench"
+# name = "rwlock_mutex_bench"
+# name = "vec_bench"
+harness = false
