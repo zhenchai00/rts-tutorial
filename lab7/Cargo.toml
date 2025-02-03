@@ -1,0 +1,10 @@
+[package]
+name = "lab7"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+amiquip = "0.4.2"
+get_user_input = "0.1.1"
+rand = "0.9.0"
+serde = "1.0.217"
