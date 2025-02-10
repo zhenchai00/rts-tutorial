@@ -1,5 +1,5 @@
 use get_user_input::set_from_input;
-use amiquip::{Connection, Error, Exchange, Publish, Result};
+use amiquip::{Connection, Exchange, Publish, Result};
 
 fn main() -> Result<()> {
     loop{

@@ -1,8 +1,6 @@
 use amiquip::{Connection, ConsumerMessage, ConsumerOptions, QueueDeclareOptions};
 
 fn main() {
-    let mut msg = "";
-
     // open connection
     let mut connection = Connection::insecure_open("amqp://guest:guest@localhost:5672").unwrap();
 
@@ -21,7 +19,6 @@ fn main() {
             ConsumerMessage::Delivery(delivery) => {
                 let body = String::from_utf8_lossy(&delivery.body);
                 println!("({:>3}) Received [{}]", i, body);
-                msg = &body;
                 consumer.ack(delivery).unwrap();
             }
             other => {

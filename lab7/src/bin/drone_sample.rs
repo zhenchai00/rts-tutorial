@@ -18,7 +18,7 @@ fn receive_instructions()-> Result<()> {
     let consumer = queue.consume(ConsumerOptions::default())?;
     println!("VEHICLE: Waiting for instructions...");
 
-    for (i, message) in consumer.receiver().iter().enumerate() {
+    for (_, message) in consumer.receiver().iter().enumerate() {
         match message {
             ConsumerMessage::Delivery(delivery) => {
                 let body = String::from_utf8_lossy(&delivery.body);

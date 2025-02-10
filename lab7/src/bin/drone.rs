@@ -1,4 +1,4 @@
-use amiquip::{Connection, ConsumerMessage, ConsumerOptions, Exchange, Publish, QueueDeclareOptions, Result};
+use amiquip::{Connection, ConsumerMessage, ConsumerOptions, QueueDeclareOptions};
 
 fn main() {
     let mut connection = Connection::insecure_open("amqp://guest:guest@localhost:5672").unwrap();

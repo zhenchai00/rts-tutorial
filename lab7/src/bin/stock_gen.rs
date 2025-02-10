@@ -28,6 +28,4 @@ fn main() -> Result<()> {
         // Wait for a while before generating the next stock
         thread::sleep(Duration::from_secs(1));
     }
-    connection.close();
-    Ok(())
 }
