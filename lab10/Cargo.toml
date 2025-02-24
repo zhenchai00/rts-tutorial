@@ -1,0 +1,10 @@
+[package]
+name = "lab10"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3.31"
+peak_alloc = "0.2.1"
+rand = "0.9.0"
+tokio = { version = "1", features = ["full"] }
